@@ -1,0 +1,1450 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #100018;
+    color: white;
+    overflow-x: hidden;
+}
+
+
+/* =========================================
+   HIDDEN
+========================================= */
+
+.hidden {
+    display: none !important;
+}
+
+
+/* =========================================
+   INTRO
+========================================= */
+
+.intro {
+
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 25px;
+
+    background:
+        radial-gradient(
+            circle at top,
+            #9d2678,
+            transparent 50%
+        ),
+        linear-gradient(
+            135deg,
+            #100018,
+            #350047
+        );
+}
+
+
+.intro-content {
+
+    width: 100%;
+    max-width: 700px;
+
+    animation: appear 2s ease;
+}
+
+
+.tiny {
+
+    font-size: 14px;
+
+    letter-spacing: 3px;
+
+    opacity: 0.7;
+}
+
+
+.intro h1 {
+
+    font-size:
+        clamp(50px, 12vw, 100px);
+
+    margin: 25px 0 10px;
+
+    color: #ffacd9;
+}
+
+
+.intro-text {
+
+    font-size: 19px;
+
+    line-height: 1.8;
+
+    margin: 25px 0 35px;
+}
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+button {
+
+    border: none;
+
+    border-radius: 50px;
+
+    padding: 16px 32px;
+
+    background: #ff4fa3;
+
+    color: white;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 40px
+        rgba(255, 79, 163, 0.4);
+
+    transition: 0.3s;
+}
+
+
+button:hover {
+
+    transform:
+        translateY(-5px)
+        scale(1.05);
+}
+
+
+/* =========================================
+   GENERAL SECTIONS
+========================================= */
+
+section {
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    padding: 100px 20px;
+}
+
+
+.story,
+.roommate,
+.special,
+.letters,
+.quiz {
+
+    text-align: center;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 100%;
+}
+
+
+/* =========================================
+   STORY
+========================================= */
+
+.story {
+
+    background:
+        linear-gradient(
+            180deg,
+            #100018,
+            #24002f
+        );
+}
+
+
+.dark {
+
+    background:
+        radial-gradient(
+            circle,
+            #630064,
+            #100018
+        );
+}
+
+
+.chapter {
+
+    color: #ff91ca;
+
+    font-size: 13px;
+
+    letter-spacing: 5px;
+
+    font-weight: bold;
+}
+
+
+h2 {
+
+    font-size:
+        clamp(32px, 6vw, 60px);
+
+    margin: 25px 0;
+}
+
+
+section p {
+
+    max-width: 700px;
+
+    line-height: 1.9;
+
+    font-size: 18px;
+}
+
+
+/* =========================================
+   TIMELINE
+========================================= */
+
+.timeline {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    margin-top: 50px;
+}
+
+
+.timeline div {
+
+    width: 150px;
+
+    padding: 25px;
+
+    border-radius: 20px;
+
+    background:
+        rgba(255, 255, 255, 0.08);
+
+    backdrop-filter: blur(10px);
+}
+
+
+.timeline strong {
+
+    display: block;
+
+    margin-bottom: 15px;
+}
+
+
+.timeline span {
+
+    font-size: 35px;
+}
+
+
+/* =========================================
+   NUMBERS
+========================================= */
+
+.numbers {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    margin: 50px 0;
+}
+
+
+.numbers div {
+
+    width: 160px;
+
+    padding: 25px;
+
+    border-radius: 20px;
+
+    background:
+        rgba(255, 255, 255, 0.08);
+}
+
+
+.numbers span {
+
+    display: block;
+
+    font-size: 42px;
+
+    color: #ff8fc8;
+
+    font-weight: bold;
+}
+
+
+.numbers small {
+
+    opacity: 0.7;
+}
+
+
+.highlight {
+
+    color: #ff9bcf;
+
+    font-weight: bold;
+}
+
+
+/* =========================================
+   MEMORIES
+========================================= */
+
+.memories {
+
+    background: #160020;
+
+    text-align: center;
+}
+
+
+.memories > p {
+
+    margin: auto;
+}
+
+
+.gallery {
+
+    width: 100%;
+
+    max-width: 1100px;
+
+    margin: 50px auto 0;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(220px, 1fr)
+        );
+
+    gap: 25px;
+}
+
+
+.memory {
+
+    background: white;
+
+    color: #222;
+
+    padding: 10px;
+
+    border-radius: 15px;
+
+    transform: rotate(-2deg);
+
+    transition: 0.4s;
+}
+
+
+.memory:nth-child(even) {
+
+    transform: rotate(2deg);
+}
+
+
+.memory:hover {
+
+    transform:
+        rotate(0)
+        scale(1.05);
+
+    z-index: 10;
+}
+
+
+.memory img {
+
+    width: 100%;
+
+    height: 260px;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+
+    display: block;
+}
+
+
+.memory p {
+
+    color: #333;
+
+    font-size: 14px;
+
+    padding: 10px;
+
+    margin: 0;
+}
+
+
+/* =========================================
+   ROOMMATE
+========================================= */
+
+.roommate {
+
+    background:
+        linear-gradient(
+            135deg,
+            #280035,
+            #590054
+        );
+}
+
+
+.funny-grid {
+
+    width: 100%;
+
+    max-width: 1000px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(250px, 1fr)
+        );
+
+    gap: 20px;
+
+    margin-top: 40px;
+}
+
+
+.funny-grid div {
+
+    padding: 35px 20px;
+
+    border-radius: 25px;
+
+    background:
+        rgba(255, 255, 255, 0.08);
+
+    font-size: 40px;
+
+    transition: 0.3s;
+}
+
+
+.funny-grid div:hover {
+
+    transform:
+        translateY(-10px);
+}
+
+
+.funny-grid h3 {
+
+    font-size: 20px;
+
+    margin: 15px 0;
+}
+
+
+.funny-grid p {
+
+    font-size: 15px;
+}
+
+
+/* =========================================
+   SPECIAL
+========================================= */
+
+.special {
+
+    background: #100018;
+}
+
+
+.special-card {
+
+    width: min(90%, 600px);
+
+    margin: 15px;
+
+    padding: 40px;
+
+    border-radius: 30px;
+
+    background:
+        rgba(255, 255, 255, 0.07);
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.1);
+
+    transition: 0.3s;
+}
+
+
+.special-card:hover {
+
+    transform:
+        translateY(-8px);
+}
+
+
+.big-heart {
+
+    font-size: 55px;
+}
+
+
+.special-card h3 {
+
+    font-size: 25px;
+
+    margin: 15px;
+}
+
+
+/* =========================================
+   LETTERS
+========================================= */
+
+.letters {
+
+    background:
+        radial-gradient(
+            circle,
+            #570052,
+            #100018
+        );
+}
+
+
+.envelopes {
+
+    width: 100%;
+
+    max-width: 1000px;
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    margin-top: 40px;
+}
+
+
+.envelope {
+
+    position: relative;
+
+    width: 170px;
+
+    height: 190px;
+
+    perspective: 1000px;
+
+    cursor: pointer;
+}
+
+
+.letter-front,
+.letter-back {
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    border-radius: 20px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex-direction: column;
+
+    padding: 20px;
+
+    backface-visibility: hidden;
+
+    transition: transform 0.7s;
+}
+
+
+.letter-front {
+
+    background: #ff4fa3;
+
+    font-size: 50px;
+}
+
+
+.letter-front span {
+
+    font-size: 14px;
+
+    margin-top: 10px;
+}
+
+
+.letter-back {
+
+    background: white;
+
+    color: #3a003c;
+
+    transform: rotateY(180deg);
+
+    font-size: 15px;
+
+    line-height: 1.6;
+}
+
+
+.envelope.open .letter-front {
+
+    transform:
+        rotateY(180deg);
+}
+
+
+.envelope.open .letter-back {
+
+    transform:
+        rotateY(0);
+}
+
+
+/* =========================================
+   QUIZ
+========================================= */
+
+.quiz {
+
+    background: #170020;
+}
+
+
+.question-box {
+
+    width: min(90%, 650px);
+
+    margin-top: 40px;
+
+    padding: 40px;
+
+    border-radius: 30px;
+
+    background:
+        rgba(255, 255, 255, 0.07);
+}
+
+
+#question {
+
+    font-size: 25px;
+
+    margin-bottom: 30px;
+}
+
+
+.answer {
+
+    display: block;
+
+    width: 100%;
+
+    margin: 12px 0;
+
+    padding: 15px;
+
+    border-radius: 12px;
+
+    background:
+        rgba(255, 255, 255, 0.1);
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.answer:hover {
+
+    background:
+        rgba(255, 79, 163, 0.5);
+}
+
+
+#quizResult {
+
+    margin: 20px auto;
+
+    color: #ff9bd1;
+
+    font-weight: bold;
+}
+
+
+/* =========================================
+   FINAL SECTION
+========================================= */
+
+.final {
+
+    position: relative;
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    padding: 0;
+
+    overflow: hidden;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #8b006f,
+            #25002f 45%,
+            #08000d
+        );
+}
+
+
+/* =========================================
+   READY / COUNTDOWN
+========================================= */
+
+#countdown {
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding: 30px;
+
+    position: relative;
+
+    z-index: 20;
+}
+
+
+#countdown p {
+
+    font-size: 18px;
+
+    margin-bottom: 15px;
+}
+
+
+#countdown h2 {
+
+    font-size:
+        clamp(40px, 8vw, 80px);
+
+    margin: 15px 0 30px;
+
+    color: white;
+
+    text-shadow:
+        0 0 15px #ff6fbd,
+        0 0 35px #ff2fa4;
+}
+
+
+/* =========================================
+   BIRTHDAY SCREEN
+========================================= */
+
+/*
+   IMPORTANT:
+   The birthday screen is hidden initially.
+   JavaScript removes the "hidden" class
+   when YES is clicked.
+*/
+
+#birthday {
+
+    position: relative;
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    overflow: hidden;
+
+    z-index: 5;
+}
+
+
+/* Make sure hidden birthday NEVER shows */
+
+#birthday.hidden {
+
+    display: none !important;
+}
+
+
+/* When birthday is active */
+
+#birthday:not(.hidden) {
+
+    display: block;
+
+    width: 100%;
+
+    min-height: 100vh;
+}
+
+
+/* =========================================
+   FIREWORKS CANVAS
+========================================= */
+
+#fireworksCanvas {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    z-index: 1;
+
+    pointer-events: none;
+}
+
+
+/* =========================================
+   BALLOONS
+========================================= */
+
+.balloons {
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    pointer-events: none;
+
+    overflow: hidden;
+
+    z-index: 2;
+}
+
+
+.balloon {
+
+    position: absolute;
+
+    bottom: -120px;
+
+    font-size: 65px;
+
+    animation:
+        balloonFloat
+        8s linear infinite;
+}
+
+
+.balloon:nth-child(1) {
+
+    left: 5%;
+
+    animation-delay: 0s;
+}
+
+
+.balloon:nth-child(2) {
+
+    left: 25%;
+
+    animation-delay: 2s;
+}
+
+
+.balloon:nth-child(3) {
+
+    left: 50%;
+
+    animation-delay: 4s;
+}
+
+
+.balloon:nth-child(4) {
+
+    left: 75%;
+
+    animation-delay: 1s;
+}
+
+
+.balloon:nth-child(5) {
+
+    left: 90%;
+
+    animation-delay: 3s;
+}
+
+
+@keyframes balloonFloat {
+
+    0% {
+
+        transform:
+            translateY(0)
+            rotate(-8deg);
+
+        opacity: 0;
+    }
+
+
+    10% {
+
+        opacity: 1;
+    }
+
+
+    50% {
+
+        transform:
+            translateY(-50vh)
+            rotate(8deg);
+    }
+
+
+    100% {
+
+        transform:
+            translateY(-120vh)
+            rotate(-8deg);
+
+        opacity: 0;
+    }
+}
+
+
+/* =========================================
+   BIRTHDAY TEXT
+========================================= */
+
+.birthday-text {
+
+    position: absolute;
+
+    top: 50%;
+
+    left: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    width: 90%;
+
+    max-width: 850px;
+
+    text-align: center;
+
+    padding: 30px;
+
+    z-index: 10;
+
+    animation:
+        birthdayAppear
+        2s ease;
+}
+
+
+/* =========================================
+   CELEBRATION TEXT
+========================================= */
+
+.celebrate {
+
+    font-size: 18px;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 20px;
+
+    color: white;
+}
+
+
+/* =========================================
+   HAPPY BIRTHDAY
+========================================= */
+
+.birthday-text h1 {
+
+    font-size:
+        clamp(45px, 10vw, 100px);
+
+    line-height: 1;
+
+    margin: 0;
+
+    color: #ffb6dc;
+
+    text-shadow:
+        0 0 10px #ff6fbd,
+        0 0 30px #ff6fbd,
+        0 0 60px #ff2fa4;
+
+    animation:
+        textGlow
+        2s ease-in-out infinite alternate;
+}
+
+
+.birthday-text h2 {
+
+    font-size:
+        clamp(40px, 8vw, 80px);
+
+    line-height: 1;
+
+    margin: 15px 0 20px;
+
+    color: white;
+
+    text-shadow:
+        0 0 15px white,
+        0 0 35px #ff6fbd;
+}
+
+
+/* =========================================
+   HEART
+========================================= */
+
+.glow-heart {
+
+    font-size: 65px;
+
+    margin: 10px;
+
+    animation:
+        heartbeat
+        1s infinite;
+}
+
+
+@keyframes heartbeat {
+
+    0%,
+    100% {
+
+        transform: scale(1);
+    }
+
+
+    50% {
+
+        transform: scale(1.25);
+    }
+}
+
+
+/* =========================================
+   FINAL MESSAGE
+========================================= */
+
+.final-message {
+
+    width: 100%;
+
+    max-width: 700px;
+
+    margin: 20px auto;
+}
+
+
+.final-message p {
+
+    width: 100%;
+
+    max-width: 700px;
+
+    font-size: 18px;
+
+    line-height: 1.8;
+
+    margin: 12px auto;
+
+    color: white;
+}
+
+
+.final-message h3 {
+
+    color: #ffacd8;
+
+    font-size: 24px;
+
+    line-height: 1.5;
+
+    margin-top: 30px;
+}
+
+
+.signature {
+
+    font-size: 25px !important;
+
+    color: #ffb6dc !important;
+
+    margin-top: 35px !important;
+}
+
+
+/* =========================================
+   GLOW ANIMATION
+========================================= */
+
+@keyframes textGlow {
+
+    from {
+
+        text-shadow:
+            0 0 10px #ff6fbd,
+            0 0 20px #ff6fbd;
+    }
+
+
+    to {
+
+        text-shadow:
+            0 0 20px #ff6fbd,
+            0 0 50px #ff2fa4,
+            0 0 80px #ff2fa4;
+    }
+}
+
+
+/* =========================================
+   BIRTHDAY APPEAR
+========================================= */
+
+@keyframes birthdayAppear {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translate(-50%, -50%)
+            scale(0.5);
+    }
+
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translate(-50%, -50%)
+            scale(1);
+    }
+}
+
+
+/* =========================================
+   FLOATING HEARTS
+========================================= */
+
+.heart {
+
+    position: fixed;
+
+    bottom: -30px;
+
+    pointer-events: none;
+
+    z-index: 9999;
+
+    animation:
+        floatUp
+        linear
+        forwards;
+}
+
+
+@keyframes floatUp {
+
+    to {
+
+        transform:
+            translateY(-110vh)
+            rotate(360deg);
+
+        opacity: 0;
+    }
+}
+
+
+/* =========================================
+   INTRO APPEAR
+========================================= */
+
+@keyframes appear {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(30px);
+    }
+
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    section {
+
+        padding: 80px 15px;
+    }
+
+
+    .intro {
+
+        padding: 20px;
+    }
+
+
+    .intro h1 {
+
+        font-size: 50px;
+    }
+
+
+    .intro-text {
+
+        font-size: 17px;
+    }
+
+
+    .timeline {
+
+        gap: 15px;
+    }
+
+
+    .timeline div {
+
+        width: 135px;
+
+        padding: 20px;
+    }
+
+
+    .memory img {
+
+        height: 230px;
+    }
+
+
+    .question-box {
+
+        padding: 25px 18px;
+    }
+
+
+    .birthday-text {
+
+        width: 94%;
+
+        padding: 15px;
+    }
+
+
+    .celebrate {
+
+        font-size: 13px;
+
+        letter-spacing: 3px;
+    }
+
+
+    .birthday-text h1 {
+
+        font-size: 45px;
+
+        line-height: 1.05;
+    }
+
+
+    .birthday-text h2 {
+
+        font-size: 42px;
+
+        line-height: 1.05;
+    }
+
+
+    .final-message p {
+
+        font-size: 16px;
+
+        line-height: 1.6;
+    }
+
+
+    .final-message h3 {
+
+        font-size: 20px;
+    }
+
+
+    .balloon {
+
+        font-size: 45px;
+    }
+
+}
+
+
+/* =========================================
+   VERY SMALL PHONES
+========================================= */
+
+@media (max-width: 400px) {
+
+    .birthday-text {
+
+        width: 96%;
+
+        padding: 10px;
+    }
+
+
+    .birthday-text h1 {
+
+        font-size: 38px;
+    }
+
+
+    .birthday-text h2 {
+
+        font-size: 35px;
+    }
+
+
+    .glow-heart {
+
+        font-size: 50px;
+    }
+
+
+    .final-message p {
+
+        font-size: 14px;
+    }
+
+
+    .final-message h3 {
+
+        font-size: 18px;
+    }
+
+}
