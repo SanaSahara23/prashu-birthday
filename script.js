@@ -24,9 +24,9 @@ function startBirthday() {
     });
 
 
-    // Start floating hearts
+    startFireworks();
 
-    setInterval(createHeart, 700);
+    setInterval(() => { createFireworks(); }, 1200);
 
 }
 
