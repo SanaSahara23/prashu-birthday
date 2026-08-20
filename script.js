@@ -4,17 +4,17 @@
 
 function openStory() {
 
-    document.getElementById("intro").classList.add("hidden");
+    document.getElementById("countdown").classList.add("hidden");
 
     document
-        .getElementById("main")
+        .getElementById("birthday")
         .classList.remove("hidden");
 
 
     // Start music
 
     const music =
-        document.getElementById("music");
+        document.getElementById("birthdayMusic");
 
     music.volume = 0.35;
 
