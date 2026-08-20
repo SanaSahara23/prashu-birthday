@@ -2,7 +2,7 @@
 // OPEN STORY
 // ==========================================
 
-function openStory() {
+function startBirthday() {
 
     document.getElementById("countdown").classList.add("hidden");
 
