@@ -2,12 +2,12 @@
 // OPEN STORY
 // ==========================================
 
-function startBirthday() {
+function openStory() {
 
-    document.getElementById("countdown").classList.add("hidden");
+    document.getElementById("intro").classList.add("hidden");
 
     document
-        .getElementById("birthday")
+        .getElementById("main")
         .classList.remove("hidden");
 
 
@@ -23,10 +23,7 @@ function startBirthday() {
             "Music will playback blocked:", error);
     });
 
-
-    startFireworks();
-
-    setInterval(() => { createFireworks(); }, 1200);
+    setInterval(createHeart, 700);
 
 }
 
