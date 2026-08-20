@@ -10,6 +10,9 @@ function openStory() {
         .getElementById("main")
         .classList.remove("hidden");
 
+    setInterval(createHeart, 700);
+
+
 
     // Start music
 
@@ -22,8 +25,6 @@ function openStory() {
         console.log(
             "Music will playback blocked:", error);
     });
-
-    setInterval(createHeart, 700);
 
 }
 
